@@ -498,13 +498,121 @@ h1, h2, h3 {
     font-size: 12px;
   }
 }
+/* ======================
+   RESPONSIVE SYSTEM
+====================== */
 
+/* ===== DESKTOP LARGE ===== */
+@media (min-width: 1200px) {
+  .nav-container,
+  .section,
+  .footer {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
 
-/* Responsive */
+/* ===== TABLET / IPAD ===== */
 @media (max-width: 1024px) {
+
+  /* Navbar */
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Category */
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Auction */
+  .auction-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Shop by Type */
   .type-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Testimonial */
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* ===== MOBILE / HP ===== */
+@media (max-width: 767px) {
+
+  /* Global Padding */
+  .section {
+    padding: 35px 18px;
+  }
+
+  /* Navbar */
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  /* Category */
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Auction */
+  .auction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Shop by Type */
+  .type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .type-box {
+    text-align: center;
+  }
+
+  .visit-btn {
+    width: 100%;
+  }
+
+  /* Testimonial */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-title-icon {
+    justify-content: center;
+  }
+
+  /* Running Text */
+  .running-track {
+    font-size: 13px;
+  }
+}
+
 
 
