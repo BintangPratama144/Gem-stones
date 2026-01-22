@@ -1,0 +1,510 @@
+/* ======================
+   RESET & GLOBAL
+====================== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  margin: 0 0 25px;
+}
+/* ======================
+   NAVBAR – GEMSTONE STYLE
+====================== */
+.navbar {
+  background: linear-gradient(180deg, #0f5132, #0a3d2a);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Container */
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.logo img {
+  width: 38px;
+}
+
+/* Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #e8f5ee;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* Underline hover (emas) */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffd700;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Search */
+.search-box input {
+  width: 240px;
+  padding: 9px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  background: transparent;
+  color: #e8f5ee;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #cfe8dc;
+}
+
+.search-box input:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  .search-box {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ======================
+   SECTION
+====================== */
+.section {
+  padding: 60px 40px;
+  background: #fff;
+}
+
+.section.gray {
+  background: #f2f2f2;
+}
+
+/* ======================
+   CATEGORIES
+====================== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.category-card span {
+  display: block;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* ======================
+   AUCTIONS
+====================== */
+.auction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.auction-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* ======================
+   CERTIFIED
+====================== */
+.certified {
+  padding: 80px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.certified h1 {
+  color: #8b0000;
+  letter-spacing: 3px;
+}
+
+/* ======================
+   TESTIMONIAL
+====================== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+/* ======================
+   RECENT SALES - HORIZONTAL
+====================== */
+.horizontal-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.horizontal-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollHorizontal 25s linear infinite;
+}
+
+/* Card */
+.sale-card {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  flex-shrink: 0;
+}
+
+.sale-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sale-card p {
+  margin-top: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes scrollHorizontal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  .search-box {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid,
+  .auction-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}
+
+
+/* ======================
+   SHOP BY TYPE (LIST)
+====================== */
+.shop-by-type {
+  background: #fff;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.type-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.type-box h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #8b0000;
+}
+
+.type-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.type-box ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.type-box ul li:hover {
+  color: #8b0000;
+  padding-left: 6px;
+}
+
+/* Visit Button */
+.visit-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: #8b0000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  transition: .3s;
+}
+
+.visit-btn:hover {
+  background: #a40000;
+  transform: translateY(-2px);
+}
+/* ======================
+   TOP RUNNING TEXT
+====================== */
+.top-running {
+  background: #8b0000;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.running-track {
+  display: inline-flex;
+  gap: 50px;
+  padding: 10px 0;
+  animation: runText 20s linear infinite;
+}
+
+@keyframes runText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+/* =========================
+   FOOTER – GEMSTONE STYLE
+========================= */
+.footer {
+  background: linear-gradient(180deg, #0f5132, #0a3d2a);
+  color: #e8f5ee;
+  padding: 50px 0 20px;
+  font-size: 14px;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Footer Item */
+.footer-item {
+  line-height: 1.7;
+}
+
+/* Footer Title */
+.footer-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #ffd700;
+  letter-spacing: 0.3px;
+}
+
+/* Title with Icon */
+.footer-title-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-title-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer Text */
+.footer-line {
+  color: #e0f2ea;
+  margin-bottom: 12px;
+}
+
+/* Quick Links */
+.footer-item a {
+  display: block;
+  color: #e8f5ee;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.footer-item a:hover {
+  color: #ffd700;
+  padding-left: 6px;
+}
+
+/* Footer Bottom */
+.footer-copy {
+  margin-top: 30px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #cfe8dc;
+  border-top: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 16px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .type-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
